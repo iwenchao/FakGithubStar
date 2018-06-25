@@ -5,3 +5,21 @@
  */
 
 
+import {Router} from "react-native-router-flux";
+import styles from "./style";
+
+const getRouter = () => {
+    return (
+        <Router
+            getSceneStyle={()=>{
+                return styles.routerStyle
+            }}
+            backAndroidHandler={
+                BackUtils()
+            }>
+
+
+
+        </Router>
+    )
+};
