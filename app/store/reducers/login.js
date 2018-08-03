@@ -5,6 +5,7 @@
  */
 
 import {LOGIN} from "../type";
+import {createReducer} from "../index";
 
 const initialState = {
     type: LOGIN.ClEAR,
@@ -13,10 +14,10 @@ const initialState = {
 const actionHandler = {
     [LOGIN.IN]: (state, action) => {
         return {};
-    }
+    },
     [LOGIN.CLEAR]: (state, action) => {
         return {};
-    }
+    },
 };
 
 export default createReducer(initialState, actionHandler);

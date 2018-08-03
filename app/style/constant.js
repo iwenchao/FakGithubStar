@@ -11,3 +11,12 @@ export const white = '#FFF';
 export const transparentColor = '#00000000';
 
 export const mainBackgroundColor = miWhite;
+
+
+
+
+
+/***************常量*********************/
+export const LANGUAGE_SELECT = "language_select";
+export const LANGUAGE_SELECT_NAME = "language_select_name";
+export const REFRESH_LANGUAGE = "refresh_language";

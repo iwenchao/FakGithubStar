@@ -6,7 +6,7 @@
 
 import {applyMiddleware, createStore} from 'redux';
 import thunk from 'redux-thunk';
-
+import reducers from './reducers'
 
 
 export function createReducer(initialState, handlers) {
@@ -20,4 +20,5 @@ export function createReducer(initialState, handlers) {
 }
 
 const createStoreWithMW = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMW(reduc)
+const store = createStoreWithMW(reducers);
+export default store

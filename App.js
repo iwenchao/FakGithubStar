@@ -11,9 +11,8 @@ import {
     Text,
     View
 } from 'react-native';
-
-
-
+import store from "./app/store/";
+import {getLanguageCurrent} from "./app/utils/actionUtils";
 
 
 const instructions = Platform.select({
@@ -28,10 +27,15 @@ export default class App extends Component<{}> {
     constructor() {
         super();
         this.state = {
-            store :store,
-            show:false
+            store: store,
+            show: false
         };
+
+        getLanguageCurrent().then((res) => {
+
+        })
     }
+
 
     render() {
         return (
