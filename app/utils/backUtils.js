@@ -6,7 +6,7 @@
 
 import {Actions} from 'react-native-router-flux'
 import I18n from '../style/i18n'
-import Toast from '..components'
+import Toast from '../components/common/ToastProxy'
 
 export default function BackUtils() {
     let hasTip = false;
@@ -21,15 +21,20 @@ export default function BackUtils() {
         if (!hasTip) {
             let handler = function () {
                 let now = Date.now();
-                if (now - ts < 1000){
+                if (now - ts < 1000) {
                     requestAnimationFrame(handler);
                 } else {
                     hasTip = false;
                 }
             };
             handler();
-            hasTip  = true;
-            Toast(I18n());
+            hasTip = true;
+            Toast(I18n("doublePressExit"));
+            return true
+        } else {
+            //BackHandler.exitApp();
+            SlpashScreen.exitApp();
+            return true;
         }
 
     }
