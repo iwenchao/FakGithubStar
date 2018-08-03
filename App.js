@@ -13,6 +13,8 @@ import {
 } from 'react-native';
 import store from "./app/store/";
 import {getLanguageCurrent} from "./app/utils/actionUtils";
+import {changeLocale} from "./app/style/i18n";
+import {Provider} from "react-redux";
 
 
 const instructions = Platform.select({
@@ -32,24 +34,23 @@ export default class App extends Component<{}> {
         };
 
         getLanguageCurrent().then((res) => {
-
+            changeLocale(res.language);
+            this.setState({
+                show: true
+            })
         })
     }
 
 
     render() {
+        if(!this.state.show){
+            return <View/>
+        }
+
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit App.js
-                </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
-                </Text>
-            </View>
+            <Provider store={this.state.store}>
+                {}
+            </Provider>
         );
     }
 }

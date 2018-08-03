@@ -7,17 +7,16 @@
 
 import {Router} from "react-native-router-flux";
 import styles from "./style";
+import BackUtils from './utils/backUtils'
 
 const getRouter = () => {
     return (
         <Router
-            getSceneStyle={()=>{
+            getSceneStyle={() => {
                 return styles.routerStyle
             }}
             backAndroidHandler={
-                BackUtils()
-            }>
-
+                BackUtils()}>
 
 
         </Router>
