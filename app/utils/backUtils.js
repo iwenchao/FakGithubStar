@@ -7,6 +7,7 @@
 import {Actions} from 'react-native-router-flux'
 import I18n from '../style/i18n'
 import Toast from '../components/common/ToastProxy'
+import SplashScreen from '../components/widget/native/SplashNative'
 
 export default function BackUtils() {
     let hasTip = false;
@@ -33,7 +34,7 @@ export default function BackUtils() {
             return true
         } else {
             //BackHandler.exitApp();
-            SlpashScreen.exitApp();
+            SplashScreen.exitApp();
             return true;
         }
 

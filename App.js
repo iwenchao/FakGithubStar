@@ -49,7 +49,7 @@ export default class App extends Component<{}> {
 
         return (
             <Provider store={this.state.store}>
-                {}
+                {getRouter()}
             </Provider>
         );
     }
