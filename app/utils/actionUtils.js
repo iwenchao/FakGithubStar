@@ -3,9 +3,7 @@
  * on 2018/8/3. 14:03
  * 文件描述：
  */
-import {
-    AsyncStorage
-} from 'react-native'
+import {AsyncStorage} from 'react-native'
 import * as Constant from "../style/constant";
 
 export const getLanguageCurrent = async () => {
@@ -16,3 +14,8 @@ export const getLanguageCurrent = async () => {
         languageName: languageName,
     }
 };
+
+const refreshHandler = new Map();
+export const getRefreshHandler = () => {
+    return refreshHandler;
+}

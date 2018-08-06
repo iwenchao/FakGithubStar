@@ -8,6 +8,9 @@ import * as constant from "./constant";
 import {StatusBar} from "react-native";
 
 export const navBarHeight = (Platform.OS === 'android') ? constant.andrnavHeaderHeight : constant.iosnavHeaderHeight;
+export const screenHeight = Dimensions.get("window").height;
+export const screenWidth = Dimensions.get("window").width;
+
 
 const styles = StyleSheet.create({
     routerStyle: {
@@ -23,6 +26,10 @@ const styles = StyleSheet.create({
         paddingTop: StatusBar.currentHeight,
         height: navBarHeight
     },
+    mainBox:{
+        backgroundColor:constant.mainBackgroundColor,
+        flex:1
+    }
 });
 
 export default styles;

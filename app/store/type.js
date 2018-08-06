@@ -8,3 +8,7 @@ export const LOGIN = {
     IN: 'LOGIN_IN',
     ClEAR: 'LOGIN_CLEAR',
 };
+
+export const USER = {
+    USER_INFO: 'user_info',
+}

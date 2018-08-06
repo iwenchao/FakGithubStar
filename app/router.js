@@ -25,7 +25,7 @@ const getRouter = () => {
                        navigationBarStyle={styles.navigationBar}
                        titleStye={{color: Constant.titleTextColor}}>
                     <Scene key="main">
-                            <Scene key="WelcomePage" component={{}}/>
+                            <Scene key="WelcomePage" component={{W}}/>
                     </Scene>
 
 
